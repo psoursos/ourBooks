@@ -57,4 +57,6 @@ app.post("/book",(req,res) => {
 //     res.redirect("/books")
 // })
 
-app.listen(3001, ()=> console.log("app is running!"))
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, ()=> console.log("app is running! port : "+PORT))

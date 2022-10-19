@@ -12,6 +12,9 @@
       "myBooks.json"
     ]
   },
+  "engines": {
+    "node": "16.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
