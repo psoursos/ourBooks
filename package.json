@@ -1,0 +1,24 @@
+{
+  "name": "booklist-app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.mjs"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "myBooks.json"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-validator": "^6.14.2",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,46 @@
+
+<form action="/doAddbookform" method="post" class="myForm">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <h2>Add A New Book :</h2>
+            </div>
+        </div>
+        <fieldset class="border p-2 mb-3">
+            <legend class="w-auto">Book info</legend>
+            <div class="row mb-3">
+                <div class="col-md-2 col-sm-12 justify-content-end d-flex">
+                    <label for="newBookTitle" class="col-form-label">Title</label>
+                </div>
+                <div class="col-md-10 col-sm-10">
+                    <input type="text" class="form-control {{#if message.newBookTitle}} is-invalid {{/if}}"  id="newBookTitle" value="{{title}}" name="newBookTitle" placeholder="book title" required>
+                    <div class="valid-feedback">ok!</div>
+                    <div class="invalid-feedback">{{message.newBookTitle.msg}}</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2 col-sm-12 justify-content-end d-flex">
+                    <label for="newBookAuthor" class="col-form-label">Author</label>
+                </div>
+                <div class="col-md-10 col-sm-10 position-relative">
+                    <input type="text" class="form-control " id="newBookAuthor" value="{{author}}" name="newBookAuthor" placeholder="book Author" required>
+                    <div class="valid-feedback">ok!</div>
+                    <div class="invalid-tooltip">Mandatory!</div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row mb-3">
+            <div class="col">
+                <button type="submit" class="btn btn-primary mb-3">Add</button>
+            </div>
+        </div>
+
+</div>
+</form>
+<div class="row mb-3">
+            <div class="col">
+                 <a class="btn btn-sm btn-success" href="/books">Back</a>
+            </div>
+        </div>
+
+       
