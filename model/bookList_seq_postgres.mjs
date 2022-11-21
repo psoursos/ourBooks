@@ -1,12 +1,12 @@
 import { Sequelize,DataTypes ,Op} from 'sequelize';
 
 const sequelize = new Sequelize({
-    host: 'localhost',
+    host: 'ec2-52-30-75-37.eu-west-1.compute.amazonaws.com',//localhost
     port: 5432,
     dialect: 'postgres',
-    username: 'postgres',
-    password :'1234',
-    database:'myBooks2',
+    username: 'asbcifcxlajwmo',//postgres
+    password :'22564ae85a24a9cc4a8b338ed4d100fa0414155184058300a62bfa87775f92db',//1234
+    database:'d681u54ohirqhg',//myBooks2
     logging: false,
     define: {
         timestamps: false
