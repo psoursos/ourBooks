@@ -4,18 +4,26 @@ import { Sequelize,DataTypes ,Op} from 'sequelize';
 // username: 'asbcifcxlajwmo',//postgres
 //database:'d681u54ohirqhg',//myBooks2
 //process.env.DATABASE_URL,
-const sequelize = new Sequelize({
-    host: 'mybooks2.internal',
-    port: 5432,
+const sequelize = new Sequelize(process.env.DATABASE_URL,{
     dialect: 'postgres',
-    username: 'postgres',
-    password :'8j6C920CKRwUpmh',
-    database:'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        },
     logging: false,
     define: {
         timestamps: false,
         freezeTableName: true
-    },
+    }
+    }
+    // host: 'mybooks2.internal',
+    // port: 5432,
+    // dialect: 'postgres',
+    // username: 'postgres',
+    // password :'8j6C920CKRwUpmh',
+    // database:'postgres',
+
    
 });
 
