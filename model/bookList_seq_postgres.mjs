@@ -4,7 +4,7 @@ import { Sequelize,DataTypes ,Op} from 'sequelize';
 // username: 'asbcifcxlajwmo',//postgres
 //database:'d681u54ohirqhg',//myBooks2
 //process.env.DATABASE_URL,
-const sequelize = new Sequelize("bfbfjhbkfd090bk47kbjhDSJb473jbfjg",{
+const sequelize = new Sequelize(process.env.DATABASE_URL,{
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
