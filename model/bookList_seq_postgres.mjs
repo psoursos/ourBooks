@@ -1,15 +1,20 @@
 import { Sequelize,DataTypes ,Op} from 'sequelize';
-
+//localhost
+//1234
+// username: 'asbcifcxlajwmo',//postgres
+//database:'d681u54ohirqhg',//myBooks2
+//process.env.DATABASE_URL,
 const sequelize = new Sequelize({
-    host: 'ec2-52-30-75-37.eu-west-1.compute.amazonaws.com',//localhost
-    port: 5432,
+    host: 'localhost',
+    port: 15432,
     dialect: 'postgres',
-    username: 'asbcifcxlajwmo',//postgres
-    password :'22564ae85a24a9cc4a8b338ed4d100fa0414155184058300a62bfa87775f92db',//1234
-    database:'d681u54ohirqhg',//myBooks2
+    username: 'postgres',
+    password :'8j6C920CKRwUpmh',
+    database:'postgres',
     logging: false,
     define: {
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true
     },
    
 });
