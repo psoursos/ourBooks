@@ -1,21 +1,22 @@
 import fs from 'fs/promises'
 
-const fileName = "myBooks.json"
-
-let newBooks = { 
-    title:"Το Θεμέλιο" ,
-    author:" Άρθουρ Κ. Κλαρκ" 
-}
-
-class BookList {
-    myBooks = { books: [] }
+    class BookList {
+        myBooks = { books: [] }
+        
+        constructor(username) {
+            if (username==undefined)
+                throw new Error("No username")
+            this.fileName = "myBooks_"+ username +".json"
+        }
 
 
     async loadBooksFromFile() {
 
         try {
-            const data = await fs.readFile(fileName, "utf-8")
-            this.myBooks = JSON.parse(data)
+            //throw new Error("Test Error")
+            const data = await fs.readFile(this.fileName,{ flag: "a+", encoding: "utf-8"})
+            if(data!='')
+                this.myBooks = JSON.parse(data)
         } catch (error) {
             throw error
         }
@@ -28,7 +29,7 @@ class BookList {
             this.myBooks.books.push(newBook)
             let jsonObj = JSON.stringify(this.myBooks)
             try {
-                 await fs.writeFile(fileName, jsonObj,{flag: "w+"})
+                 await fs.writeFile(this.fileName, jsonObj,{flag: "w+"})
             } catch (error) {
                 throw error
             }

@@ -1,0 +1,5 @@
+node_modules/
+app-hbs.mjs
+app.mjs
+.env
+app_crypt.mjs
