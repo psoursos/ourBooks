@@ -17,7 +17,7 @@ const MemoryStore = createMemoryStore(session)
 
 const myBooksSession = session ({
     //crypto  check if client S_Id is ok
-    secret : "bfbfjhbkfd090bk47kbjhDSJb473jbfjg",
+    secret : process.env.SESSION_SECRET,
     //detete mem store after 24 hours
     store: new MemoryStore({checkPeriod: 86400*1000}),
     resave: false,
