@@ -5,8 +5,8 @@ import { Sequelize,DataTypes ,Op} from 'sequelize';
 //database:'d681u54ohirqhg',//myBooks2
 //process.env.DATABASE_URL,
 const sequelize = new Sequelize({
-    host: 'localhost',
-    port: 15432,
+    host: 'mybooks2.internal',
+    port: 5432,
     dialect: 'postgres',
     username: 'postgres',
     password :'8j6C920CKRwUpmh',

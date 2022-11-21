@@ -23,7 +23,8 @@ const validateNewBook = [
                 if (!validator.isAlpha(ch,'el-GR') &&
                     !validator.isAlpha(ch,'en-US') &&
                     !validator.isNumeric(ch,'en-US') &&
-                    ch != ' '){
+                    ch != ' ' && 
+                    ch !='.'){
                     throw new Error('Επιτρέπονται ελληνικοί και λατινικοί χαρακτήρες')
             }
         }
@@ -37,7 +38,8 @@ const validateNewBook = [
             for (let ch of value){
                 if (!validator.isAlpha(ch,'el-GR') &&
                     !validator.isAlpha(ch,'en-US') &&
-                    ch != ' '){
+                    ch != ' ' && 
+                    ch !='.'){
                     throw new Error('Επιτρέπονται ελληνικοί και λατινικοί χαρακτήρες')
             } 
             }
